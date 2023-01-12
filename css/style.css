@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'saira', arial, serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 200px;
+    font-size: 36px;
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0;
+}
+
+input[type=text] {
+    width: 200px;
+    height: 30px;
+    text-align: justify;
+    outline: none;
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+input[type=text]:focus {
+    background-color: rgb(222, 222, 222);
+}
+
+input[type=button] {
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+}
+
+input[type=button]:hover {
+    background-color: gray;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+
+#navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#navigation ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-top: 3px solid black;
+}
+
+#navigation ul>li>a {
+    display: block;
+    padding: 0;
+    margin-left: 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    height: 25px;
+    text-decoration: none;
+    transition: 0.5s;
+    transition-duration: 0.5s;
+    border-radius: 0 0 5px 5px;
+}
+
+#navigation a:hover{
+    background-color: rgba(45, 118, 48, 1);
+    color: white;
+}
+
+
+.asideBar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: fixed;
+    z-index: 5;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(56, 146, 59);
+    height: 80px;
+    width: 80px;
+    border-radius: 5px 0 0 5px;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.asideBar>a {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.asideBar2 {
+    top: 75%;
+    transition: 0,3s;
+}
+
+.asideBar1 {
+    top: 60%;
+    transition: 0,3s;
+}
+
+.asideBar:hover {
+    background-color: rgb(45, 118, 48);
+}
+
+.asideBar:active {
+    background-color: rgb(45, 118, 48);
+    transform: translateY(2px);
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+/*Here carousel need to be done*/
+
+#carousel, .imgCarousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imgCarousel {
+    display: block;
+    position: relative;
+}
+
+.contentCarousel {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+    font-size: 14px;
+    color: white;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(45, 118, 48, 0.5));
+    z-index: 1;
+    bottom: 5px;
+    left:10px;
+}
+
+#img1, #img2 {
+    max-width: 100vw;
+    min-height: 152px;
+    max-height: 232px;
+    object-fit:fill;
+    width: 900px;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#pButton1, #pButton2 {
+    display: block;
+    float: right;
+    height: 18px;
+    width:80px;
+    margin: 0px 5px 5px 0px;
+    text-align: center;
+    background-color: rgb(45, 118, 48);
+    border: 3px solid rgb(45, 118, 48);
+    border-radius: 5px 0 0 5px;
+    color: white;
+}
+
+#pButton1:hover, #pButton2:hover {
+    cursor: pointer;
+    background-color: rgba(56, 146, 59, 0);
+}
+
+/*Here carousel need to be done*/
+
+#mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+#paragraph {
+    display: flex;
+    flex-wrap: wrap;
+}
+#paragraph>h1 {
+    color: rgb(45, 118, 48);
+}
+#paragraph>p>b {
+    color: rgb(45, 118, 48);
+
+}
+#paragraph>p>a {
+    text-decoration: none;
+    color: rgb(45, 118, 48);
+    font-size: bold;
+}
+
+#paragraph>p {
+    padding: 10px;
+    width: 330px;
+}
+
+/*Message Form*/
+#messageForm {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(45, 118, 48);
+    width: 250px;
+}
+
+#messageForm>input {
+    width: 230px;
+    height: 30px;
+    border: none;
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+#messageForm>input[type=button] {
+    width: 234px;
+    height: 34px;
+    background-color: rgb(45, 118, 48);
+    transition: 0,3s;
+}
+
+#messageForm>input[type=button]:hover {
+    background-color: rgb(56, 146, 59);
+}
+
+#messageForm>input[type=button]:active{
+    background-color: rgb(56, 146, 59);
+    transform: translateY(2px);
+}
+
+#errorField {
+    color: rgba(140, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(140, 0, 0, 0.5);
+    font-size: 14px;
+}
+/*Message Form*/
+
+
+.nav2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    background-color: aqua;
+}
+
+.tiles {
+  height: auto;
+  min-width: 250px;
+  width:30vw;  
+}
