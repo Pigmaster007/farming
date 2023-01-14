@@ -131,6 +131,9 @@ ul, li {
 
 .asideBar:hover {
     background-color: rgb(45, 118, 48);
+    -webkit-box-shadow: -1px 1px 20px 1px rgba(255,255,255,0.8);
+    -moz-box-shadow: -1px 1px 20px 1px rgba(255,255,255,0.8);
+    box-shadow: -1px 1px 20px 1px rgba(255,255,255,0.8);
 }
 
 .asideBar:active {
@@ -147,7 +150,7 @@ ul, li {
 
 }
 
-/*Here carousel need to be done*/
+/*Here carousel starts*/
 
 #carousel, .imgCarousel {
     display: flex;
@@ -208,7 +211,7 @@ ul, li {
     background-color: rgba(56, 146, 59, 0);
 }
 
-/*Here carousel need to be done*/
+/*Here carousel ends*/
 
 #mainContent {
     display: flex;
@@ -238,7 +241,7 @@ ul, li {
     width: 330px;
 }
 
-/*Message Form*/
+/*Message Form starts*/
 #messageForm {
     padding: 10px;
     display: flex;
@@ -257,18 +260,20 @@ ul, li {
     margin-bottom: 2px;
 }
 
-#messageForm>input[type=button] {
+#messageForm>button {
     width: 234px;
     height: 34px;
     background-color: rgb(45, 118, 48);
     transition: 0,3s;
+    outline: none;
+    border: none;
 }
 
-#messageForm>input[type=button]:hover {
+#messageForm>button:hover {
     background-color: rgb(56, 146, 59);
 }
 
-#messageForm>input[type=button]:active{
+#messageForm>button:active{
     background-color: rgb(56, 146, 59);
     transform: translateY(2px);
 }
@@ -285,11 +290,18 @@ ul, li {
     display: flex;
     flex-wrap: wrap;
     width: 90vw;
-    background-color: aqua;
+    /* background-color: rgb(45, 118, 48); */
 }
 
 .tiles {
   height: auto;
+  margin: 5px;
   min-width: 250px;
-  width:30vw;  
+  width:25vw;
+  background-image: linear-gradient(to right, rgba(45, 118, 48, 0.5), rgba(45, 118, 48, 1));
+      
+}
+
+.tiles>div>img {
+    max-width: 25vw;
 }

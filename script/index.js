@@ -63,11 +63,14 @@ document.getElementById('messageForm').addEventListener('submit', (e) => {
   if (errMessages.length > 0) {
     e.preventDefault()
     errorField.innerText = errMessages.join(', ');
+    document.getElementById('sB').style.width = '237px'
   } 
   else {
     userName.value = ''
     phone.value = ''
     email.value = ''
     messageField.value = ''
+    errorField.innerText = ''
+    document.getElementById('sB').style.width = '234px'
   }
 })
