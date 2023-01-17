@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'saira', arial, serif;
+    display: flex;
 }
+
+
 
 header {
     display: flex;
@@ -11,6 +14,7 @@ header {
     flex-wrap: wrap;
     height: 200px;
     font-size: 36px;
+
 }
 
 #search {
@@ -33,7 +37,7 @@ input[type=text]:focus {
     background-color: rgb(222, 222, 222);
 }
 
-input[type=button] {
+#searchBt {
     border-radius: 0;
     background-color: black;
     color: white;
@@ -41,7 +45,7 @@ input[type=button] {
     border: none;
 }
 
-input[type=button]:hover {
+#searchBt:hover {
     background-color: gray;
 }
 
@@ -273,7 +277,7 @@ ul, li {
     background-color: rgb(56, 146, 59);
 }
 
-#messageForm>button:active{
+#messageForm>button:active, .nav2But:active, #pButton1:active, #pButton2:active{
     background-color: rgb(56, 146, 59);
     transform: translateY(2px);
 }
@@ -299,9 +303,41 @@ ul, li {
   min-width: 250px;
   width:25vw;
   background-image: linear-gradient(to right, rgba(45, 118, 48, 0.5), rgba(45, 118, 48, 1));
-      
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
 }
 
 .tiles>div>img {
     max-width: 25vw;
+}
+
+.nav2But {
+    width: 271px;
+    height: 30px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: large;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: rgb(45, 118, 48);
+    transition: 0,5s;
+}
+
+.nav2But:hover {
+    background-color: transparent;
+    border: 3px solid rgb(45, 118, 48);
+}
+
+.hidden {
+    display: none;
+}
+
+.wisible {
+    display: block;
+    background-image:  linear-gradient(to right, rgba(45, 118, 48, 0.5), rgba(45, 118, 48, 1));
+    color: white;
+    min-width: 400px;
+    padding: 5px;
 }

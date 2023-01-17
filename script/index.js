@@ -74,3 +74,21 @@ document.getElementById('messageForm').addEventListener('submit', (e) => {
     document.getElementById('sB').style.width = '234px'
   }
 })
+
+function Baner (clickButtonId, articleId) {
+    let barnsArticle = document.getElementById(articleId);
+
+document.getElementById(clickButtonId).addEventListener('click', e => {
+  if (barnsArticle.className == 'hidden') {
+    barnsArticle.className = 'wisible'
+  } else {
+    barnsArticle.className = 'hidden'
+  }
+})
+}
+
+Baner ('breadingInfo', 'breading');
+Baner ('barnsInfo', 'barns');
+Baner ('historyInfo', 'history');
+
+// if (document.getElementById('breading').className == 'wisible' )

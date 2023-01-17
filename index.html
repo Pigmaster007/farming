@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="wraper">
     <header>
         <div id="logo"> LOGO </div>
         <div id="search">
-            <input type="text" placeholder="What are you looking for?">
-            <input type="button" value="Search">
+            <input id="searchInp" type="text" placeholder="What are you looking for?">
+            <input id="searchBt" type="button" value="Search">
         </div>
     </header>
     <nav id="navigation">
         <ul>
-            <li> <a href="#"> Welcome </a></li>
+            <li> <a href="#mainContent"> Welcome </a></li>
             <li> <a href="#"> About us </a></li>
             <li> <a href="#"> Breeding products </a></li>
-            <li> <a href="#"> Departments </a></li>
-            <li> <a href="#"> Contact </a></li>
+            <li> <a href="#nav2_1"> Departments </a></li>
+            <li> <a href="#contactUs"> Contact </a></li>
         </ul>
     </nav>
     <aside id="aside">
@@ -113,17 +114,41 @@
             <div id="nav2_1" class="tiles">
                 <div> <img src="img/pigs_7.jpg" alt=""></div>
                 <div> <h1>Breading</h1></div>
-                <div><input type="button" value="value"></div>
+                <div><input id="breadingInfo" type="button" value="Read about Breading" class="nav2But"></div>
             </div>
             <div id="nav2_2" class="tiles">
                 <div> <img src="img/pigs_4.jpg" alt=""></div>
                 <div> <h1>Barns</h1></div>
-                <div><input type="button" value="value"></div>
+                <div><input id="barnsInfo" type="button" value="More about our barns" class="nav2But"></div>
             </div>
             <div id="nav2_3" class="tiles">
                 <div> <img src="img/pigs_14.jpg" alt=""></div>
-                <div> <h1>Contacts</h1></div>
-                <div><input type="button" value="value"></div>
+                <div> <h1>History</h1></div>
+                <div><input id="historyInfo" type="button" value="Contact us" class="nav2But"></div>
+            </div>
+
+            <div class="hidden" id="breading">
+                <p>breadingInfo</p>
+            </div>
+            <div class="hidden" id="barns">
+                <p>
+                As a customer of LOGO , you get the best of the best. 
+                We have a newer stable facility, where the oldest stable building is from 1997. Our poults grow up on floor areas where at least 50% is solid, feeding is restricted and all animals are given a daily allocation of straw. This means that we get robust studs and breeding animals, and this results in very few complaints from our customers. 
+                We mix all feed in-house, and this ensures a salmonella index of 0.0.
+                Employees: both Danish students, unskilled and skilled employees.
+                Our employees have a large share in our good results, they are our most important resource.
+                We constantly strive to maintain and develop an attractive workplace.
+                Our teams are made up of skilled and unskilled employees, students who are currently studying farming and 2 interns from Ukraine - all skilled and thoroughly trained to handle the systematization and note-taking discipline that is necessary in a breeding and reproduction herd.
+                </p>
+                <h2>Barn I:</h2>
+                <p>
+                820 sows, divided between breeding in duroc and landrace as well as propagation of YL colts.
+                Health status: red spf + myc.
+                At Barn I, all our breeding animals are tested and we can offer LL boars and sows, DD boars and YL pullets
+                </p>
+            </div>
+            <div class="hidden" id="history">
+                <p>historyInfo</p>
             </div>
         </div>
     </main>
@@ -142,7 +167,7 @@
                     <p> Address </p>
                     <p> main info </p>
                 </div>
-                <div>
+                <div id="contactUs">
                     <h2>Contact us</h2>
                     <a href="tel:2345671"> 123 45 67 </a>
                     <a href="mailto: qwertyuiouyt@gmail.com">e-Mail</a>
@@ -154,6 +179,7 @@
         </div>
         
     </footer>
+</div>
     <script src="script/index.js"></script>
 </body>
 </html>
