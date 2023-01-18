@@ -75,20 +75,32 @@ document.getElementById('messageForm').addEventListener('submit', (e) => {
   }
 })
 
-function Baner (clickButtonId, articleId) {
+function Baner (clickButtonId, clickButtonId2, clickButtonId3, articleId, article2Id, article3Id) {
     let barnsArticle = document.getElementById(articleId);
 
 document.getElementById(clickButtonId).addEventListener('click', e => {
   if (barnsArticle.className == 'hidden') {
     barnsArticle.className = 'wisible'
-  } else {
+    //document.getElementById(divId).style.backgroundColor = 'rgb(45, 118, 48)'
+    document.getElementById(article2Id).className = 'hidden'
+    document.getElementById(article3Id).className = 'hidden'
+    document.getElementById(clickButtonId).style.height = '35px'
+    document.getElementById(clickButtonId).style.marginBottom = '0px'
+    document.getElementById(clickButtonId2).style.height = '30px'
+    document.getElementById(clickButtonId2).style.marginBottom = '5px'
+    document.getElementById(clickButtonId3).style.height = '30px'
+    document.getElementById(clickButtonId3).style.marginBottom = '5px'
+
+    } else {
     barnsArticle.className = 'hidden'
+    document.getElementById(clickButtonId).style.height = '30px'
+    document.getElementById(clickButtonId).style.marginBottom = '5px'
+        
   }
 })
 }
 
-Baner ('breadingInfo', 'breading');
-Baner ('barnsInfo', 'barns');
-Baner ('historyInfo', 'history');
+Baner ('breadingInfo', 'barnsInfo', 'historyInfo', 'breading', 'barns', 'history');
+Baner ('barnsInfo', 'breadingInfo', 'historyInfo', 'barns', 'breading', 'history');
+Baner ('historyInfo', 'barnsInfo', 'breadingInfo', 'history', 'barns', 'breading');
 
-// if (document.getElementById('breading').className == 'wisible' )
