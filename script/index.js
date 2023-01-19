@@ -13,6 +13,8 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
+
+//form code starts
 const userName = document.getElementById('name');
 const phone = document.getElementById('phone');
 const email = document.getElementById('email');
@@ -74,6 +76,8 @@ document.getElementById('messageForm').addEventListener('submit', (e) => {
     document.getElementById('sB').style.width = '234px'
   }
 })
+//form code ends
+
 
 function Baner (clickButtonId, clickButtonId2, clickButtonId3, articleId, article2Id, article3Id) {
     let barnsArticle = document.getElementById(articleId);
@@ -104,3 +108,21 @@ Baner ('breadingInfo', 'barnsInfo', 'historyInfo', 'breading', 'barns', 'history
 Baner ('barnsInfo', 'breadingInfo', 'historyInfo', 'barns', 'breading', 'history');
 Baner ('historyInfo', 'barnsInfo', 'breadingInfo', 'history', 'barns', 'breading');
 
+//window size adjusting
+
+let windowWidth = window.innerWidth;
+
+
+window.addEventListener('load', e => {
+  if (windowWidth <= 700) {
+    document.getElementById('messageForm').style.width = '70vw';
+    // document.querySelectorAll('.wisible').forEach(element =>{
+    //   element.style.width = '250px';
+    // })
+    
+
+  } else {
+    document.getElementById('messageForm').style.width = '250px';
+    
+  }
+})
